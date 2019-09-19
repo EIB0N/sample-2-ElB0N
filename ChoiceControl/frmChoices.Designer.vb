@@ -24,6 +24,10 @@ Partial Class frmChoices
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboSaleItems = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lstSizes = New System.Windows.Forms.ListBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.clbHats = New System.Windows.Forms.CheckedListBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,11 +48,50 @@ Partial Class frmChoices
         Me.cboSaleItems.Size = New System.Drawing.Size(121, 21)
         Me.cboSaleItems.TabIndex = 1
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(41, 126)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "List Box - Sizes"
+        '
+        'lstSizes
+        '
+        Me.lstSizes.FormattingEnabled = True
+        Me.lstSizes.Location = New System.Drawing.Point(40, 161)
+        Me.lstSizes.Name = "lstSizes"
+        Me.lstSizes.Size = New System.Drawing.Size(119, 82)
+        Me.lstSizes.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(36, 263)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Checked List Box - Hats"
+        '
+        'clbHats
+        '
+        Me.clbHats.CheckOnClick = True
+        Me.clbHats.FormattingEnabled = True
+        Me.clbHats.Location = New System.Drawing.Point(38, 299)
+        Me.clbHats.Name = "clbHats"
+        Me.clbHats.Size = New System.Drawing.Size(116, 94)
+        Me.clbHats.TabIndex = 5
+        '
         'frmChoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 690)
+        Me.Controls.Add(Me.clbHats)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lstSizes)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cboSaleItems)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmChoices"
@@ -60,4 +103,8 @@ Partial Class frmChoices
 
     Friend WithEvents Label1 As Label
     Friend WithEvents cboSaleItems As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lstSizes As ListBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents clbHats As CheckedListBox
 End Class
