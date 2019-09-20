@@ -345,7 +345,7 @@ Partial Class frmChoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 690)
+        Me.ClientSize = New System.Drawing.Size(772, 457)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnClear)

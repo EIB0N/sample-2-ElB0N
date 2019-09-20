@@ -10,3 +10,4 @@ C:\Users\newuser\Desktop\ChoiceControl\bin\Debug\ChoiceControl.xml
 C:\Users\newuser\Desktop\ChoiceControl\obj\Debug\ChoiceControl.exe
 C:\Users\newuser\Desktop\ChoiceControl\obj\Debug\ChoiceControl.xml
 C:\Users\newuser\Desktop\ChoiceControl\obj\Debug\ChoiceControl.pdb
+C:\Users\newuser\Desktop\ChoiceControl\obj\Debug\ChoiceControl.frmSummary.resources

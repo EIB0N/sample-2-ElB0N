@@ -6,6 +6,7 @@
     Private strTrim As String 'to hold the trim choice
     Private strStartDate As String
     Private strEndDate As String
+    Private Summary As frmSummary
 
     Private Sub LoadComboBoxChoices()
         cboSaleItems.Items.Add("Long sleeve shirt")
@@ -143,7 +144,12 @@
         strResult &= "Approval date: " & FormatDateTime(dtmApproval.Value, DateFormat.ShortDate) & vbCrLf
         strResult &= " Sale Start date: " & strStartDate & vbCrLf
         strResult &= " Sale End Date: " & strEndDate & vbCrLf
-        MessageBox.Show(strResult, "Your choices", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'MessageBox.Show(strResult, "Your choices", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Summary = New frmSummary
+        Summary.lblSummary.Text = strResult
+        Summary.ShowDialog()
+        btnClear.PerformClick() 'simulate clocking of a button
 
     End Sub
 
