@@ -123,7 +123,27 @@
             Exit Sub 'early jump out of this procedure
         End If
         ' if the data is good
-
+        strResult = "you have selected the following :" & vbCrLf
+        strResult &= "Sale item: " & cboSaleItems.SelectedItem.ToString & vbCrLf
+        strResult &= "Size: " & lstSizes.SelectedItem.ToString & vbCrLf
+        strResult &= "Color: " & strColor & vbCrLf
+        strResult &= "Trim : " & strTrim & vbCrLf
+        strResult &= "Hats: " & vbCrLf
+        For i = 0 To clbHats.Items.Count - 1
+            If clbHats.GetItemCheckState(i) = CheckState.Checked Then ' this item was selected
+                strResult &= "   " & clbHats.Items(i).ToString & vbCrLf
+            End If
+        Next
+        strResult &= "Delivery Options: " & vbCrLf
+        For i = 0 To arrChk.Length - 1
+            If arrChk(i).Checked Then ' it was selected
+                strResult &= "   " & arrChk(i).Text
+            End If
+        Next
+        strResult &= "Approval date: " & FormatDateTime(dtmApproval.Value, DateFormat.ShortDate) & vbCrLf
+        strResult &= " Sale Start date: " & strStartDate & vbCrLf
+        strResult &= " Sale End Date: " & strEndDate & vbCrLf
+        MessageBox.Show(strResult, "Your choices", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub
 End Class
