@@ -146,4 +146,33 @@
         MessageBox.Show(strResult, "Your choices", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        Dim i As Integer
+        For i = 0 To arrRedColor.Length - 1
+            arrRedColor(i).Checked = False
+        Next
+        For i = 0 To arrRedTrim.Length - 1
+            arrRedTrim(i).Checked = False
+        Next
+        For i = 0 To arrChk.Length - 1
+            arrChk(i).Checked = False
+        Next
+        clbHats.ClearSelected() 'clears the highlighting of selections
+        For i = 0 To clbHats.Items.Count - 1
+            clbHats.SetItemCheckState(i, CheckState.Unchecked)
+        Next
+        lstSizes.SelectedIndex = -1
+        cboSaleItems.SelectedIndex = -1
+        strColor = " "
+        strTrim = " "
+        dtmApproval.Value = Today.Date
+        mclSellRange.SelectionStart = Today
+        mclSellRange.SelectionEnd = Today
+        ErrorProvider1.Clear()
+        txtId.Clear()
+        mskZip.Clear()
+
+
+    End Sub
 End Class

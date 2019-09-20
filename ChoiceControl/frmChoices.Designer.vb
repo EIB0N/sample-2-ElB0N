@@ -308,6 +308,7 @@ Partial Class frmChoices
         Me.mskZip.Name = "mskZip"
         Me.mskZip.Size = New System.Drawing.Size(162, 20)
         Me.mskZip.TabIndex = 20
+        Me.mskZip.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'btnReport
         '
