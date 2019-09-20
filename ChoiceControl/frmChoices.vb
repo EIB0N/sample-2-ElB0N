@@ -91,6 +91,39 @@
         If lstSizes.SelectedIndex = -1 Then ' no selection was made
             ErrorProvider1.SetError(lstSizes, "you must select a size")
             blnErrors = True
+
         End If
+
+        If strColor = "" Then ' no color was selected
+            ErrorProvider1.SetError(grpColors, "you must select colors")
+            blnErrors = True
+        End If
+
+        If strTrim = "" Then ' no trim was selected
+            ErrorProvider1.SetError(grpTrim, "you must select a trim color")
+            blnErrors = True
+        End If
+
+        If strStartDate = "" Then ' no trim was selected
+            ErrorProvider1.SetError(mclSellRange, "you must select a start date")
+            blnErrors = True
+        End If
+
+        If Not IsNumeric(txtId.Text) Then 'id is non-numeric
+            ErrorProvider1.SetError(txtId, "you must enter a numerical value")
+            blnErrors = True
+        End If
+
+        If mskZip.Text = "" Then 'missing zip code
+            ErrorProvider1.SetError(mskZip, "You must enter a zip code")
+            blnErrors = True
+        End If
+
+        If blnErrors Then ' cant go foward some of the data is missing or bad
+            Exit Sub 'early jump out of this procedure
+        End If
+        ' if the data is good
+
+
     End Sub
 End Class

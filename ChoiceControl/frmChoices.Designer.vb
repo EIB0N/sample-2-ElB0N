@@ -32,12 +32,12 @@ Partial Class frmChoices
         Me.redRed = New System.Windows.Forms.RadioButton()
         Me.redBlue = New System.Windows.Forms.RadioButton()
         Me.redGreen = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.grpColors = New System.Windows.Forms.GroupBox()
+        Me.grpTrim = New System.Windows.Forms.GroupBox()
         Me.redBlack = New System.Windows.Forms.RadioButton()
         Me.redSilver = New System.Windows.Forms.RadioButton()
         Me.redGold = New System.Windows.Forms.RadioButton()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.grpDelivery = New System.Windows.Forms.GroupBox()
         Me.chkResidential = New System.Windows.Forms.CheckBox()
         Me.chkSaturday = New System.Windows.Forms.CheckBox()
         Me.chkExpress = New System.Windows.Forms.CheckBox()
@@ -46,16 +46,16 @@ Partial Class frmChoices
         Me.Label5 = New System.Windows.Forms.Label()
         Me.mclSellRange = New System.Windows.Forms.MonthCalendar()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.mskZip = New System.Windows.Forms.MaskedTextBox()
         Me.btnReport = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.grpColors.SuspendLayout()
+        Me.grpTrim.SuspendLayout()
+        Me.grpDelivery.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -145,29 +145,29 @@ Partial Class frmChoices
         Me.redGreen.Text = "Green"
         Me.redGreen.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'grpColors
         '
-        Me.GroupBox1.Controls.Add(Me.redGreen)
-        Me.GroupBox1.Controls.Add(Me.redBlue)
-        Me.GroupBox1.Controls.Add(Me.redRed)
-        Me.GroupBox1.Location = New System.Drawing.Point(201, 39)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(168, 128)
-        Me.GroupBox1.TabIndex = 10
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Radio Buttons - Color"
+        Me.grpColors.Controls.Add(Me.redGreen)
+        Me.grpColors.Controls.Add(Me.redBlue)
+        Me.grpColors.Controls.Add(Me.redRed)
+        Me.grpColors.Location = New System.Drawing.Point(201, 39)
+        Me.grpColors.Name = "grpColors"
+        Me.grpColors.Size = New System.Drawing.Size(168, 128)
+        Me.grpColors.TabIndex = 10
+        Me.grpColors.TabStop = False
+        Me.grpColors.Text = "Radio Buttons - Color"
         '
-        'GroupBox2
+        'grpTrim
         '
-        Me.GroupBox2.Controls.Add(Me.redBlack)
-        Me.GroupBox2.Controls.Add(Me.redSilver)
-        Me.GroupBox2.Controls.Add(Me.redGold)
-        Me.GroupBox2.Location = New System.Drawing.Point(201, 173)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(166, 124)
-        Me.GroupBox2.TabIndex = 11
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "More Radio Buttons - Trim"
+        Me.grpTrim.Controls.Add(Me.redBlack)
+        Me.grpTrim.Controls.Add(Me.redSilver)
+        Me.grpTrim.Controls.Add(Me.redGold)
+        Me.grpTrim.Location = New System.Drawing.Point(201, 173)
+        Me.grpTrim.Name = "grpTrim"
+        Me.grpTrim.Size = New System.Drawing.Size(166, 124)
+        Me.grpTrim.TabIndex = 11
+        Me.grpTrim.TabStop = False
+        Me.grpTrim.Text = "More Radio Buttons - Trim"
         '
         'redBlack
         '
@@ -202,17 +202,17 @@ Partial Class frmChoices
         Me.redGold.Text = "Gold"
         Me.redGold.UseVisualStyleBackColor = True
         '
-        'GroupBox3
+        'grpDelivery
         '
-        Me.GroupBox3.Controls.Add(Me.chkResidential)
-        Me.GroupBox3.Controls.Add(Me.chkSaturday)
-        Me.GroupBox3.Controls.Add(Me.chkExpress)
-        Me.GroupBox3.Location = New System.Drawing.Point(201, 317)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(165, 119)
-        Me.GroupBox3.TabIndex = 12
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Check Boxes - Delivery"
+        Me.grpDelivery.Controls.Add(Me.chkResidential)
+        Me.grpDelivery.Controls.Add(Me.chkSaturday)
+        Me.grpDelivery.Controls.Add(Me.chkExpress)
+        Me.grpDelivery.Location = New System.Drawing.Point(201, 317)
+        Me.grpDelivery.Name = "grpDelivery"
+        Me.grpDelivery.Size = New System.Drawing.Size(165, 119)
+        Me.grpDelivery.TabIndex = 12
+        Me.grpDelivery.TabStop = False
+        Me.grpDelivery.Text = "Check Boxes - Delivery"
         '
         'chkResidential
         '
@@ -285,12 +285,12 @@ Partial Class frmChoices
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "TextBox - Manager Id number"
         '
-        'TextBox1
+        'txtId
         '
-        Me.TextBox1.Location = New System.Drawing.Point(393, 313)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox1.TabIndex = 18
+        Me.txtId.Location = New System.Drawing.Point(393, 313)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(166, 20)
+        Me.txtId.TabIndex = 18
         '
         'Label7
         '
@@ -351,15 +351,15 @@ Partial Class frmChoices
         Me.Controls.Add(Me.btnReport)
         Me.Controls.Add(Me.mskZip)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.mclSellRange)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dtmApproval)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grpDelivery)
+        Me.Controls.Add(Me.grpTrim)
+        Me.Controls.Add(Me.grpColors)
         Me.Controls.Add(Me.clbHats)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lstSizes)
@@ -368,12 +368,12 @@ Partial Class frmChoices
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmChoices"
         Me.Text = "Controls That Provide Choices"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.grpColors.ResumeLayout(False)
+        Me.grpColors.PerformLayout()
+        Me.grpTrim.ResumeLayout(False)
+        Me.grpTrim.PerformLayout()
+        Me.grpDelivery.ResumeLayout(False)
+        Me.grpDelivery.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -389,12 +389,12 @@ Partial Class frmChoices
     Friend WithEvents redRed As RadioButton
     Friend WithEvents redBlue As RadioButton
     Friend WithEvents redGreen As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grpColors As GroupBox
+    Friend WithEvents grpTrim As GroupBox
     Friend WithEvents redBlack As RadioButton
     Friend WithEvents redSilver As RadioButton
     Friend WithEvents redGold As RadioButton
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents grpDelivery As GroupBox
     Friend WithEvents chkResidential As CheckBox
     Friend WithEvents chkSaturday As CheckBox
     Friend WithEvents chkExpress As CheckBox
@@ -403,7 +403,7 @@ Partial Class frmChoices
     Friend WithEvents Label5 As Label
     Friend WithEvents mclSellRange As MonthCalendar
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtId As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents mskZip As MaskedTextBox
     Friend WithEvents btnReport As Button
