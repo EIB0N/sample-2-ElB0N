@@ -22,6 +22,7 @@ Partial Class frmChoices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboSaleItems = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,7 +44,7 @@ Partial Class frmChoices
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dtmApproval = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.mclSellRange = New System.Windows.Forms.MonthCalendar()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -51,9 +52,11 @@ Partial Class frmChoices
         Me.btnReport = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -267,11 +270,11 @@ Partial Class frmChoices
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Month Calander - Sale Date range"
         '
-        'MonthCalendar1
+        'mclSellRange
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(394, 114)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 16
+        Me.mclSellRange.Location = New System.Drawing.Point(394, 114)
+        Me.mclSellRange.Name = "mclSellRange"
+        Me.mclSellRange.TabIndex = 16
         '
         'Label6
         '
@@ -333,6 +336,10 @@ Partial Class frmChoices
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmChoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,7 +353,7 @@ Partial Class frmChoices
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.MonthCalendar1)
+        Me.Controls.Add(Me.mclSellRange)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dtmApproval)
         Me.Controls.Add(Me.Label4)
@@ -367,6 +374,7 @@ Partial Class frmChoices
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -393,7 +401,7 @@ Partial Class frmChoices
     Friend WithEvents Label4 As Label
     Friend WithEvents dtmApproval As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents mclSellRange As MonthCalendar
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label7 As Label
@@ -401,4 +409,5 @@ Partial Class frmChoices
     Friend WithEvents btnReport As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

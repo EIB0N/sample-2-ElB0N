@@ -69,7 +69,28 @@
             strTrim = rad.Text
         End If
 
+    End Sub
 
+    Private Sub mclSellRange_DateSelected(sender As Object, e As DateRangeEventArgs) Handles mclSellRange.DateSelected
+        ' capture the start and end date of the selected date range
+        strStartDate = FormatDateTime(e.Start.ToString, DateFormat.ShortDate)
+        strEndDate = FormatDateTime(e.End.ToString, DateFormat.ShortDate)
+    End Sub
 
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        Dim strResult As String
+        Dim i As Integer
+        Dim blnErrors As Boolean
+        ErrorProvider1.Clear() ' clear any previous error message
+        'validate selection in the combo, listbox and radio buttons.
+        If cboSaleItems.SelectedIndex = -1 Then ' no selection was made
+            ErrorProvider1.SetError(cboSaleItems, "You must Select a Sale item")
+            blnErrors = True
+
+        End If
+        If lstSizes.SelectedIndex = -1 Then ' no selection was made
+            ErrorProvider1.SetError(lstSizes, "you must select a size")
+            blnErrors = True
+        End If
     End Sub
 End Class
