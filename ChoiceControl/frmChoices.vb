@@ -1,4 +1,11 @@
 ﻿Public Class frmChoices
+    Private arrRedColor(2) As RadioButton 'array of 3 RadioButton objects
+    Private arrRedTrim(2) As RadioButton
+    Private arrChk(2) As CheckBox
+    Private strColor As String 'holds color choices
+    Private strTrim As String 'to hold the trim choice
+    Private strStartDate As String
+    Private strEndDate As String
 
     Private Sub LoadComboBoxChoices()
         cboSaleItems.Items.Add("Long sleeve shirt")
@@ -10,7 +17,16 @@
         LoadComboBoxChoices()
         LoadListBBoxChoices()
         LoadCheckedListBoxChoices()
-
+        'load the control arrays
+        arrRedColor(0) = redRed
+        arrRedColor(1) = redBlue
+        arrRedColor(2) = redGreen
+        arrRedTrim(0) = redGold
+        arrRedTrim(1) = redSilver
+        arrRedTrim(2) = redBlack
+        arrChk(0) = chkExpress
+        arrChk(1) = chkSaturday
+        arrChk(2) = chkResidential
 
     End Sub
 
@@ -28,5 +44,9 @@
         clbHats.Items.Add("CowBoy Hat")
         clbHats.Items.Add("Tennis Hat")
         clbHats.Items.Add("Golf Hat")
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit() ' end the program
     End Sub
 End Class

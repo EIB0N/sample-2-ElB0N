@@ -48,6 +48,9 @@ Partial Class frmChoices
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.mskZip = New System.Windows.Forms.MaskedTextBox()
+        Me.btnReport = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -303,11 +306,42 @@ Partial Class frmChoices
         Me.mskZip.Size = New System.Drawing.Size(162, 20)
         Me.mskZip.TabIndex = 20
         '
+        'btnReport
+        '
+        Me.btnReport.Location = New System.Drawing.Point(648, 56)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(99, 38)
+        Me.btnReport.TabIndex = 21
+        Me.btnReport.Text = "Report Choices"
+        Me.btnReport.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(648, 126)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(99, 38)
+        Me.btnClear.TabIndex = 22
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(648, 193)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(99, 38)
+        Me.btnExit.TabIndex = 23
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
         'frmChoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 690)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.btnReport)
         Me.Controls.Add(Me.mskZip)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox1)
@@ -364,4 +398,7 @@ Partial Class frmChoices
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents mskZip As MaskedTextBox
+    Friend WithEvents btnReport As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnExit As Button
 End Class
