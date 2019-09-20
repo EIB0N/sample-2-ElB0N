@@ -49,4 +49,27 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit() ' end the program
     End Sub
+
+    Private Sub redColors_CheckedChanged(sender As Object, e As EventArgs) Handles redRed.CheckedChanged, redBlue.CheckedChanged, redGreen.CheckedChanged
+        ' we have wired in all of the 3 color radio button to this single event procedure.
+
+        Dim rad As RadioButton
+        rad = DirectCast(sender, RadioButton)
+        If rad.Checked Then ' only if the radio button is being turned on
+            strColor = rad.Text
+        End If
+
+    End Sub
+
+    Private Sub redTrim_CheckedChanged(sender As Object, e As EventArgs) Handles redBlack.CheckedChanged, redGold.CheckedChanged, redSilver.CheckedChanged
+
+        Dim rad As RadioButton
+        rad = DirectCast(sender, RadioButton)
+        If rad.Checked Then
+            strTrim = rad.Text
+        End If
+
+
+
+    End Sub
 End Class
